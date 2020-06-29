@@ -9,11 +9,13 @@ Script 3. parti bir api ile yapılmıştır. Localhost üzerisinde kullanmanız�
 3. Otomatik olarak gelen hesap bilgileri mail: admin@admin.com şifre: 123456
 4. şifre oluşturmak için ana dizindeki createpass.php yi açıp düzenleyin ve çalıştırın.
 5. Myqsl üzerisinden bilgileri düzenleyebilirsiniz.
-6. Son olarak index.php'de bulunan #allowDangerousWebUsageAtMyOwnRisk kısmına aşağıdaki kodu ekleyin.
+6. İndex.php'de bulunan #allowDangerousWebUsageAtMyOwnRisk kısmına aşağıdaki kodu ekleyin.
+7. Siteye giriş yapın ve takipçilerini kayıt etmesi için Takipten Çıkanları bul butonuna basın ve bir süre bekleyip sayfayı yenileyin.
+8. Artık Kullanıma hazırsınız.
 ```
 \InstagramAPI\Instagram::$allowDangerousWebUsageAtMyOwnRisk = true;
 ``` 
-### BAŞINIZA GELECEK HER ŞEYDEN SİZ SORUMLUSUNUZ!
+### BAŞINIZA GELECEK HER ŞEYDEN SİZ SORUMLUSUNUZ! Localhost üzerisinde kullanmanızı tavsiye ettiğimi tekrar hatırlatmak isterim.
 
 
 
