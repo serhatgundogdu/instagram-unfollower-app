@@ -19,3 +19,4 @@ Script 3. parti bir api ile yapılmıştır. Localhost üzerisinde kullanmanız�
 
 
 Theme URL which used in the script: https://github.com/StartBootstrap/startbootstrap-sb-admin-URL
+![](https://image.prntscr.com/image/Q-dVL38HRR6tlJbt89Q9Vw.png)
