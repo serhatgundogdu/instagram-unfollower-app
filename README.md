@@ -5,7 +5,7 @@ Script 3. parti bir api ile yapılmıştır. Localhost üzerisinde kullanmanız�
 # Kurulum
 
 1. İndirdiğiniz .sql dosyasını mysqle kurun.
-2. Ana dizindeki config.php dosyasını açın. Database ve Hesap bilgilerinizi yazın.
+2. App dizininde bulunan config.php dosyasını açın. Database ve Hesap bilgilerinizi yazın.
 3. Otomatik olarak gelen hesap bilgileri mail: admin@admin.com şifre: 123456
 4. şifre oluşturmak için ana dizindeki createpass.php yi açıp düzenleyin ve çalıştırın.
 5. Myqsl üzerisinden bilgileri düzenleyebilirsiniz.
