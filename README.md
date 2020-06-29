@@ -18,4 +18,4 @@ Script 3. parti bir api ile yapılmıştır. Localhost üzerisinde kullanmanız�
 ### BAŞINIZA GELECEK HER ŞEYDEN SİZ SORUMLUSUNUZ! Localhost üzerisinde kullanmanızı tavsiye ettiğimi tekrar hatırlatmak isterim.
 
 
-
+Theme URL which used in the script: https://github.com/StartBootstrap/startbootstrap-sb-admin-URL
