@@ -18,13 +18,21 @@
 							</tr>
 				  		</thead>					
 						<tbody>
-							<tr>
-								<td>#1</td>
-								<td>System Architect</td>
-								<td>Edinburgh</td>
-								<td>61</td>
+							<?
+							foreach ($query as $row): 
+							$photo = $row['user_photo'];						
+							?>
+							<tr style="align-items: center;">
+								<td>#<?=$row['id']?></td>
+								<td><?=$row['username']?></td>
+								<td><?=$row['user_left_time']?></td>
+								<td width="40%" style="">
+									<a class="btn btn-warning" target="_BLANK" href="https://www.instagram.com/<?=$row['username']?>"><i class="fa fa-user"></i> Profile Git</a>
+									<button class="btn btn-danger" data-ajax onclick=""><i class="fas fa-sign-out-alt"></i> Takipten Çık</button>
+									<button class="btn btn-primary" data-ajax onclick=""><i class="fas fa-comment-alt"></i> Mesaj Gönder</button>
+								</td>
 							</tr>
-				
+							<? endforeach;?>   
                 		</tbody>
             		</table>
             	</div>

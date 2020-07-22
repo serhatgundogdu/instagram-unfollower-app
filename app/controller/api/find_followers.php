@@ -10,27 +10,14 @@ if ($data = form_control()){
     $lul = json_decode($ayarcek['followers'],true);
     $followers = json_decode($ig->people->getSelfFollowers($rankToken),true);
 
-    function searchMyCoolArray($arrays, $key, $search) {
-
-        foreach($arrays as $object) {
-            if(is_object($object)) {
-               $object = get_object_vars($object);
-            }
-     
-            if(array_key_exists($key, $object) && $object[$key] == $search) return true;
-            }
-     
-            return false;
-     }
           
            //print_r(array_intersect($followers['users'], $lul['users']));
-           $html = '<div class="kt-portlet kt-portlet--height-fluid">
-           <div class="kt-portlet__body">							
-           <div class="kt-widget4">
-            {@degistir}
-           </div>
-             </div>
-           </div>';
+           $html = '<table class="table table-bordered">
+           <tbody>
+           <tr>
+           {@degistir}
+           </tr>
+           </tbody></table>';
            $notfollowers = "";
            $notfollowername = null;
            //$notfollowers+= "UnFollowers ".count($followers['users'])."<br>";
@@ -41,9 +28,9 @@ if ($data = form_control()){
                 //echo $lul['users'][$i]['username']." Takip Ediyor!<br>";
               }else{
             
-                $notfollowers.='<div class="kt-widget4__item">
-                <a target="_BLANK" class="kt-widget4__title kt-widget4__title--light" href="https://www.instagram.com/'.$lul['users'][$i]['username'].'">'.$lul['users'][$i]['username'].' Takip Takipten Çıktı!</a>
-                </div>';
+                $notfollowers.='<td>
+                <a target="_BLANK" href="https://www.instagram.com/'.$lul['users'][$i]['username'].'">'.$lul['users'][$i]['username'].' Takip Takipten Çıktı!</a>
+                </td>';
                 $notfollowername.=$lul['users'][$i]['username'].' ,';
                 $reviewekle=$db->prepare("INSERT INTO last_lefters SET
                 username=:review_title,
@@ -65,9 +52,7 @@ if ($data = form_control()){
           $rankToken = \InstagramAPI\Signatures::generateUUID();
 		      $followers = $ig->people->getSelfFollowers($rankToken);
           if(($notfollowers) == ""){
-            $notfollowers = '<div class="kt-widget4__item"><span class="kt-widget4__icon">
-            <i class="flaticon2-rocket kt-font-brand"></i>
-          </span><a class="kt-widget4__title kt-widget4__title--light">Kimse takipten çıkmamış.</a></div>';
+            $notfollowers = '<td>Kimse takipten çıkmamış!</td>';
           }
 		  $ayarsor=$db->prepare("UPDATE followings SET followers='".$followers."' WHERE id='0'");
 		  $ayarsor->execute();

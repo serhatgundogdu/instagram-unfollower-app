@@ -25,6 +25,20 @@ function isAjaxRequest(){
 }
 
 
+function searchMyCoolArray($arrays, $key, $search) {
+
+    foreach($arrays as $object) {
+        if(is_object($object)) {
+           $object = get_object_vars($object);
+        }
+ 
+        if(array_key_exists($key, $object) && $object[$key] == $search) return true;
+        }
+ 
+        return false;
+ }
+
+
 function permalink($str, $options = array())
 {
     $str = mb_convert_encoding((string)$str, 'UTF-8', mb_list_encodings());

@@ -55,6 +55,7 @@
 
   <script src="<?=public_url('vendor/datatables/jquery.dataTables.min.js')?>"></script>
   <script src="<?=public_url('vendor/datatables/dataTables.bootstrap4.min.js')?>"></script>
+  <script src="<?=public_url('vendor/chart.js/Chart.min.js')?>"></script>
 
 </body>
 
