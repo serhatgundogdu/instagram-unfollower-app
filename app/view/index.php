@@ -164,7 +164,7 @@
 function findit(formId){
   var data = $(formId).serialize();
   $("#salaklar").html("");
-  $("#salaklar").html("<div class='alert alert-dark' role='alert'><div class='alert-text'><h4 class='alert-heading'><i class='flaticon-warning'></i> Keep Tight!</h4>Loading the follower informations. Please wait as this may take a few seconds...</div></div>");
+  $("#salaklar").html("<div class='alert alert-dark' role='alert'><div class='alert-text'><h4 class='alert-heading'><i class='flaticon-warning'></i> Lütfen Bekleyin!</h4>Takipçi bilgileri yükleniyor. Bu biraz zaman alabilir...</div></div>");
   $.post('<?=site_url('api')?>/find_followers', data , function (response){
     if(response.error){
       $("#salaklar").html("");
@@ -240,7 +240,7 @@ var myLineChart = new Chart(ctx, {
           drawBorder: false
         },
         ticks: {
-          maxTicksLimit: 7
+          maxTicksLimit: 7 
         }
       }],
       yAxes: [{
