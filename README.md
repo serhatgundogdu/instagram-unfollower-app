@@ -1,8 +1,7 @@
 
-# ! Not Working
+# ! Not working anymore due to "Api"
 # Instagram Takipten Çıkanlar
 
-Script 3. parti bir api ile yapılmıştır. Localhost üzerisinde kullanmanızı tavsiye ederim. Başınıza gelebilecek sorunlardan sizin sorumlu olduğunuzu da hatırlatmak isterim.
 
 # Kurulum
 
